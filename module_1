@@ -1,0 +1,41 @@
+module module_1
+CONTAINS
+subroutine method(a,b,h,k,cc) 
+implicit none
+real, intent(in):: h, a, b
+integer :: k        
+real:: aa, bb, cc, x, f_a, f_b, f_c
+
+f_a=f(a)
+f_b=f(b)
+
+if (f_a*f_b>0) then 
+print*, 'no root'
+end if
+
+aa=a
+bb=b 
+
+do while(k<max_step)
+cc=(bb+aa)/2 
+f_c=f(cc)
+k=k+1
+ if (f(cc-h)*f(cc+h)<0) then 
+ aa=cc-h
+ bb=cc+h
+ exit
+  else if (f_b*f_c>0) then 
+  bb=cc
+  f_b=f_c
+  else 
+  aa=cc
+  f_a=f_c
+ ENDIF
+enddo
+end subroutine
+
+real function f(x)
+real:: x
+f=x**4+3*x**3-9*x-9
+end function
+end module module_1

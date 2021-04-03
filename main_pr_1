@@ -1,0 +1,22 @@
+program first
+use module_1
+implicit NONE
+real:: b, a, cc, h
+integer:: max_step, k
+
+k=0
+max_step=10000
+
+print*, 'Vvedite sigma'
+read*, h
+print*, 'Vvedite left end'
+read*, a 
+print*, 'Vvedite right end'
+read*, b
+
+call method(a,b,h,k,cc)
+
+print*, 'times=', k 
+print*, 'root=', cc
+
+end program

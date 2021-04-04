@@ -19,4 +19,10 @@ call method(a,b,h,k,cc)
 print*, 'times=', k 
 print*, 'root=', cc
 
+contains
+real function f(x)
+real:: x
+f=x**4+3*x**3-9*x-9
+end function
+
 end program

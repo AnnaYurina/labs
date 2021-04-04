@@ -34,8 +34,4 @@ k=k+1
 enddo
 end subroutine
 
-real function f(x)
-real:: x
-f=x**4+3*x**3-9*x-9
-end function
 end module module_1

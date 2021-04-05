@@ -1,0 +1,24 @@
+program second
+use module_2
+implicit NONE
+real:: a, b, m, res, int, k 
+integer:: i
+
+int=0.1443
+a=0 
+b=1 
+
+do i=1,3
+ print*, 'm'
+ read*, m
+ call method(a,b,m,res,k)
+ print*, 'result and pogres', res, k
+end do
+
+CONTAINS
+real function f(x)
+real:: x
+f=(atan(x))**2/(x+1)
+end function
+
+end program

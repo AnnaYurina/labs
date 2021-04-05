@@ -1,0 +1,21 @@
+module module_2
+
+CONTAINS
+subroutine method(a,b,m,res, k) 
+ implicit none
+ real, intent(in):: a,b,m
+ real:: h, s, aa, k, res
+
+h=(b-a)/m
+aa=a+h/2
+s=f(aa)
+do while (aa<(b-h/2))
+  aa=aa+h
+  s=s+f(aa)
+ENDDO
+
+res=h*s 
+k=abs(int-res)
+end subroutine
+
+end module

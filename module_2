@@ -4,8 +4,9 @@ CONTAINS
 subroutine method(a,b,m,res, k) 
  implicit none
  real, intent(in):: a,b,m
- real:: h, s, aa, k, res
+ real:: h, s, aa, k, res, int
 
+int=0.1443
 h=(b-a)/m
 aa=a+h/2
 s=f(aa)

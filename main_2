@@ -1,9 +1,10 @@
 program second
 use module_2
 implicit NONE
-real:: a, b, m, res, k 
+real:: a, b, m, res, k, int 
 integer:: i
 
+int=0.1443
 a=0 
 b=1 
 

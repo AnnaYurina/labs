@@ -9,7 +9,7 @@ subroutine method(a,b,m,res, k)
 h=(b-a)/m
 aa=a+h/2
 s=f(aa)
-do while (aa<(b-h/2))
+do i=1,m-1
   aa=aa+h
   s=s+f(aa)
 ENDDO

@@ -12,6 +12,7 @@ do i=1,3
  print*, 'm'
  read*, m
  call method(a,b,m,res,k)
+ k=abs(int-res)
  print*, 'result and pogres', res, k
 end do
 

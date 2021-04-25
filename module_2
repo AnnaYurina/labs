@@ -15,7 +15,6 @@ do i=1,m-1
 ENDDO
 
 res=h*s 
-k=abs(int-res)
 end subroutine
 
 end module

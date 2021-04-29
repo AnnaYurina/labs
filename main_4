@@ -1,0 +1,16 @@
+program fourth
+
+use module_4
+implicit none
+integer:: n
+real:: a, y1, y2
+
+print*, 'Vvedite a, n'
+read*, a, n
+
+y1=y_rec(a,n)
+y2=y_unrec(a,n)
+
+print*, 'results', y1 , y2
+
+end program

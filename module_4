@@ -1,0 +1,54 @@
+module module_4
+
+CONTAINS
+
+recursive real function y_rec(a,n) result(fun)
+integer,intent(in) :: n
+real, intent(in) :: a
+integer:: k
+if (n>0) then
+ select case(n)
+  case(0)
+  fun = 1
+  case(1:)
+  fun = a*y_rec(a, n-1)
+  !write(*,*) 'fun from 2', fun
+  end select
+end if
+if ((n<=0).and.(a==0)) write(*,*) 'NOT CORRECT'
+if ((a.ne.0) .and. (n==0)) fun = 1
+if ((a.ne.0).and.(n<0)) then
+     select case(n)
+     case(0)
+     fun = 1
+     case(:-1)
+     fun=(1./a)*y_rec(a, n+1)
+     end select
+end if
+end function y_rec
+
+
+real function y_unrec(a,n) result(fun1)
+integer,intent(in) :: n
+real, intent(in)   :: a
+integer:: k, d
+
+if ((a.ne.0) .and. (n==0)) fun1=1
+if ((n<=0).and.(a==0)) write(*,*) 'NOT CORRECT'
+if (n>0) then
+ fun1=1
+ do k=1,n
+  fun1=fun1*a
+  enddo
+end if
+
+if ((n<0).and.(a.ne.0)) then
+ d=abs(n)
+ fun1=1
+ do k=1,d
+  fun1=fun1*(1./a)
+  enddo
+end if
+end function y_unrec
+
+end module module_4

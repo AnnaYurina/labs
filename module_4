@@ -40,15 +40,12 @@ if (n>0) then
  do k=1,n
   fun1=fun1*a
   enddo
-end if
-
-if ((n<0).and.(a.ne.0)) then
- d=abs(n)
- fun1=1
- do k=1,d
-  fun1=fun1*(1./a)
-  enddo
-end if
+  else 
+   d=abs(n)
+   do k=1,n
+   fun1=fun1*a
+   enddo
+ end if
 end function y_unrec
 
 end module module_4

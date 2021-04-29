@@ -40,11 +40,13 @@ if (n>0) then
  do k=1,n
   fun1=fun1*a
   enddo
-  else 
-   d=abs(n)
-   do k=1,n
-   fun1=fun1*a
-   enddo
+   else 
+    fun1=1
+    d=abs(n)
+    do k=1,d
+    fun1=fun1*a
+    enddo
+    fun1=1./fun1
  end if
 end function y_unrec
 

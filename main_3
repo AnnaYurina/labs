@@ -1,17 +1,19 @@
 program third
+use module_3
 implicit NONE
-
-real*8:: s
+real:: s, f
 integer :: k, i, number, a, d
 
+write(*,*) 'first number'
+read*, f
 
- s=random_r(k)
- number = nint(s*10)
+s=random_r(k,f)
+number = nint(s*10)
  !print*, 's number', s, number
- if (number<=0.and.number>=9) then 
-write(*,*) 'vvedite your number'
-do d=1,3
-read*, a
+if (number>=0.and.number<=9) then 
+ write(*,*) 'vvedite your number'
+  do d=1,3
+  read*, a
  if (a==number) then 
  print*, 'correct answer'
  exit

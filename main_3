@@ -2,12 +2,12 @@ program third
 use module_3
 implicit NONE
 real:: s, f
-integer :: k, i, number, a, d
+integer :: i, number, a, d
 
 write(*,*) 'first number'
 read*, f
 
-s=random_r(k,f)
+s=random_r(f)
 number = nint(s*10)
  !print*, 's number', s, number
 if (number>=0.and.number<=9) then 

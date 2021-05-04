@@ -1,8 +1,7 @@
 module module_3
 
 CONTAINS
-recursive real*8 function random_r(k,f) result(kr)
-integer,intent(in) :: k
+real function random_r(f) result(kr)
 real,intent(in) :: f
 real:: pi
 pi=3.14
@@ -10,4 +9,3 @@ pi=3.14
   Kr = mod(Kr,1.0)
 end function random_r
 end module module_3
-
